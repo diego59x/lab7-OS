@@ -7,20 +7,20 @@ Day=`Date +%d`
 Month=`Date +%m`
 Year=`Date +%Y`
 # Save it into file
-echo “Date $Day-$Month-$Year”>> /Backup/$Year$Month$Day.mon
+echo “Date $Day-$Month-$Year”>> $Year$Month$Day.mon
 
 # Get OS Version
 Release = ubuntu$version
 # Save it into file
-echo “Version $Release”>> /Backup/$Year$Month$Day.mon
+echo “Version $Release”>> $Year$Month$Day.mon
 
 # Get users connected
 UsersConn = users
 # Save it into file
-echo “Users $UsersConn”>> /Backup/$Year$Month$Day.mon
+echo “Users $UsersConn”>> $Year$Month$Day.mon
 
 # Get Cron job ID
-CronID = pgrep -u <user> “$Year$Month$Day”
+CronID = pgrep -u diegoX “$Year$Month$Day”
 # Reemplazar <user> con el nombre del usuario que hizo el archivo
 #Save it into file
-echo “CronId $CronID”>>/Backup/$Year$Month$Day.mon
+echo “CronId $CronID”>> $Year$Month$Day.mon
